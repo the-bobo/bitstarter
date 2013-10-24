@@ -5,7 +5,7 @@ app.use(express.logger());
 var buffer = new Buffer(128);
 // buffer.write(fs.readFileSync(index.html, utf-8));
 buffer.write("String", "utf-8");
-var thing = buffer.toString("utf-8", 0, buffer.length);
+var thing = buffer.toString("utf-8", 0, 128);
 
 app.get('/', function(request, response) {
   response.send(thing);
